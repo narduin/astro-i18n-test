@@ -1,0 +1,23 @@
+---
+import { l, astroI18n } from "astro-i18n";
+
+// get the locale currently in use
+const currentLocale = astroI18n.langCode;
+// get all the locales available on the website and remove the one currently in use
+const availableLocales = astroI18n.langCodes.filter(
+	(locale) => locale !== currentLocale
+);
+// current path
+const currentRoute = Astro.url.pathname;
+---
+
+<ul role="list">
+	{
+		// create a list of available alternative locale
+		availableLocales.map((locale) => (
+			<li>
+				<a href={l(currentRoute as any, {}, locale as any)}>{locale}</a>
+			</li>
+		))
+	}
+</ul>

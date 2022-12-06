@@ -1,0 +1,11 @@
+---
+import { t, l, astroI18n } from "astro-i18n";
+import Layout from "../layouts/base.astro";
+
+const currentLocale = astroI18n.langCode;
+---
+
+<Layout>
+	<h1>{t("index.title")}</h1>
+	<h2>{t("index.currentLocale")} {currentLocale}</h2>
+</Layout>
