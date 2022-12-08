@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <g data-name="mobile">
+    <path fill="#d4ebf2" d="M0 0h150v150H0z"/>
+    <path fill="#10113a" d="M48.33 25h53.33v100H48.33z"/>
+    <path fill="#162e57" d="M71.67 113.33h6.67V120h-6.67zM55 31.67h40v76.67H55z"/>
+    <path fill="#ff826c" d="M62.78 38.33h24.44v22.22H62.78zm0 24.45h24.44V65H62.78zm0 8.89h24.44v22.22H62.78zm0 24.44h24.44v2.22H62.78z"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 510 495">
+  <path fill="#162e57" d="M40 280h30v215H40zm60 0H75v125h10v90h30V280h-15z"/>
+  <path fill="#ff826c" d="M60 0v90h45V30h15V0H60z"/>
+  <path fill="#d4ebf2" d="M15 90h115v190H15z"/>
+  <path fill="#162e57" d="M85 90h15v135H85z"/>
+  <path fill="#ff826c" d="M130 110V90h-25v315h25V140h120v-30H130z"/>
+  <path fill="#162e57" d="M280 185v-15h-5v-15h-5v-55h5v-5h-30v5h5v55h-5v15h-5v15h-10v25h60v-25h-10z"/>
+  <path fill="#ff826c" d="M275 65h10v10h-10zm-15 10h5v5h-5zm0-30h10v10h-10zm130 165v-5h-10v-80h5v-5h-25v5h5v80h-10v5h-5v30h5v5h35v-5h5v-30h-5zm40-90v5h5v115h15V125h5v-5h-25z"/>
+  <path fill="#d4ebf2" d="M365 145v5h40v110h5V150h40v-5h-85z"/>
+  <path fill="#ff826c" d="M440 240h5v5h-5z"/>
+  <path fill="#162e57" d="M435 195h15v45h-15z"/>
+  <path fill="#d4ebf2" d="M510 260H180v25h10v210h310V285h10v-25z"/>
+  <path fill="#ff826c" d="M15 90v25H0v195h15v95h60V90H15z"/>
+</svg>

@@ -2,10 +2,35 @@
 import { t, l, astroI18n } from "astro-i18n";
 import Layout from "../layouts/base.astro";
 
-const currentLocale = astroI18n.langCode;
+// get all HP sections
+const allSections = await Astro.glob("../data/HP/**/*.md");
+
+// filter sections against the current locale
+const localizedSections = allSections.filter((section) => {
+	return section.frontmatter.lang === astroI18n.langCode;
+});
 ---
 
 <Layout>
 	<h1>{t("index.title")}</h1>
-	<h2>{t("index.currentLocale")} {currentLocale}</h2>
+	<p>{t("index.currentLocale")} {astroI18n.langCode}</p>
+
+	<hr>
+	<h2>Filtered in frontmatter</h2>
+	{
+		localizedSections.map((section) => (
+			<section.Content/>
+		))
+	}
+	<hr />
+	<h2>Filtered directly in astro</h2>
+	{
+		allSections.map((s) => {
+			if (s.frontmatter.lang === astroI18n.langCode) {
+				return (
+					<s.Content/>
+				)
+			}
+		})
+	}
 </Layout>

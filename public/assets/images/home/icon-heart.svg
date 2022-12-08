@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <g data-name="heart">
+    <path fill="transparent" d="M0 0h150v150H0z"/>
+    <path fill="#ff826c" d="M103.57 50.43V39H80.71v11.43H69.29V39H46.43v11.43H35v34.28h11.43v11.43h11.43v11.43h11.43V119h11.42v-11.43h11.43V96.14h11.43V84.71H115V50.43h-11.43z"/>
+  </g>
+</svg>

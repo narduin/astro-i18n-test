@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <g data-name="desktop">
+    <path fill="transparent" d="M0 0h150v150H0z"/>
+    <path fill="#162e57" d="M15 35h120v80H15z"/>
+    <path fill="#ff826c" d="M15 35h120v8H15z"/>
+    <path fill="#162e57" d="M17.67 37.67h2.67v2.67h-2.67zm5.33 0h2.67v2.67H23zm5.33 0H31v2.67h-2.67z"/>
+    <path fill="#ff826c" d="M25.67 59H55v26.67H25.67zm0 29.33H55V91H25.67zM60.33 59h29.33v26.67H60.33zm0 29.33h29.33V91H60.33zM95 59h29.33v26.67H95zm0 29.33h29.33V91H95z"/>
+  </g>
+</svg>

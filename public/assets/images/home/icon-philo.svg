@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <g data-name="articles">
+    <path fill="transparent" d="M0 0h150v150H0z"/>
+    <path fill="#162e57" d="M56.54 51.92v9.23H28.85v9.24H15v13.84h13.85v9.23h4.61v13.85h13.85V93.46h9.23v9.23h36.92V51.92H56.54z"/>
+    <path fill="#ff826c" d="M107.31 47.31h13.85v9.23h-13.85zm0 23.07H135v9.23h-27.69zm13.84-32.3H135v9.23h-13.85zm-13.84 55.38h13.85v9.23h-13.85zm13.84 9.23H135v9.23h-13.85z"/>
+  </g>
+</svg>
