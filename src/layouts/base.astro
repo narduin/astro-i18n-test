@@ -2,9 +2,10 @@
 import { I18nProvider } from "astro-i18n/components";
 import Header from "../components/Header.astro";
 ---
+
 <I18nProvider>
 	<!-- 'dir' attribute will be removed when 'I18nProvider' wraps the html -->
-<html dir="ltr">
+	<html dir="ltr">
 		<head>
 			<meta charset="utf-8" />
 			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,5 +19,5 @@ import Header from "../components/Header.astro";
 				<slot />
 			</main>
 		</body>
-		</html>
-	</I18nProvider>
+	</html>
+</I18nProvider>
