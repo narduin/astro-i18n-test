@@ -1,9 +1,16 @@
 ---
 import { t, l, astroI18n } from "astro-i18n";
+astroI18n.init(Astro)
+
 import Layout from "../layouts/base.astro";
 
 // get all HP sections from the src/data/HP directory
 const allSections = await Astro.glob("../data/HP/**/*.md");
+
+// filter sections against the current locale
+const localizedSections = allSections.filter((section) => {
+	return section.frontmatter.lang === astroI18n.langCode;
+});
 ---
 
 <Layout>
@@ -11,16 +18,30 @@ const allSections = await Astro.glob("../data/HP/**/*.md");
 	<p>{t("index.currentLocale")} {astroI18n.langCode}</p>
 
 	<hr>
+	<pre>This link should send to the translated route "/articles" but instead it only prepends the locale name to the string "articles".</pre>
+	<a href={l('/articles')}>{t('index.articles.articles')}</a>
 
-	<h2>Filtered directly in astro</h2>
-	<p>Will render everything perfectly.</p>
+	<p>Here are the working links hardcoded:</p>
+	<ul>
+		<li>
+			<a href="/articles">/articles</a>
+		</li>
+		<li>
+			<a href="/en/blog">/en/blog</a>
+		</li>
+		<li>
+			<a href="/it/articoli">/it/articoli</a>
+		</li>
+	</ul>
+
+	<hr>
+
+	<h2>Filtered in frontmatter</h2>
+	<p>Works as expected.</p>
 	{
-		allSections.map((s) => {
-			if (s.frontmatter.lang === astroI18n.langCode) {
-				return (
-					<s.Content/>
-				)
-			}
-		})
+		localizedSections.map((section) => (
+			<section.Content/>
+		))
 	}
+
 </Layout>

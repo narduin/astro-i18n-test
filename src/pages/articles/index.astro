@@ -1,0 +1,11 @@
+---
+import { t, l, astroI18n } from "astro-i18n";
+astroI18n.init(Astro);
+---
+
+<h1>{t("index.articles.articles")}</h1>
+<p>
+	The link should send to the route of the current page: <code>{Astro.url.pathname}</code>
+</p>
+<p>The actual translated route is: <code>{l("/articles")}</code></p>
+<a href={l("/articles")}>{t("index.articles.articles")}</a>

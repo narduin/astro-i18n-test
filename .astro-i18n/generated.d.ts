@@ -1,10 +1,10 @@
 type DefaultLangCode = "fr"
 type SupportedLangCode = "en" | "it"
-type LangCode = "fr" | "en" | "it"
-type RouteUri = | "/" 
-type RouteParams = {"/": undefined; }
-type TranslationPath = "index.title" | "index.currentLocale"
-type TranslationOptions = { "index.title": {} | undefined; "index.currentLocale": {} | undefined; }
+type LangCode = DefaultLangCode | SupportedLangCode
+type RouteUri = | "/articles" | "/" 
+type RouteParams = {"/articles": undefined; "/": undefined; }
+type TranslationPath = "index.articles.articles" | "index.title" | "index.currentLocale"
+type TranslationOptions = { "index.articles.articles": {} | undefined; "index.title": {} | undefined; "index.currentLocale": {} | undefined; }
 
 declare module "astro-i18n" {
 	export * from "astro-i18n/"
@@ -23,6 +23,8 @@ declare module "astro-i18n" {
 			: [options: TranslationOptions[Path], langCode?: LangCode]
 	): string
 	
+	export function extractRouteLangCode(route: string): LangCode | undefined
+	
 	type Translation = string | { [translationKey: string]: string | Translation }
 	type Translations = { [langCode: string]: Record<string, Translation> }
 	type RouteTranslations = { [langCode: string]: Record<string, string> }
@@ -37,6 +39,7 @@ declare module "astro-i18n" {
 		get langCode(): LangCode
 		set langCode(langCode: LangCode)
 		get formatters(): Record<string, InterpolationFormatter>
+		init(Astro: { url: URL }, formatters?: Record<string, InterpolationFormatter>): void
 		getFormatter(name: string): InterpolationFormatter | undefined
 		setFormatter(name: string, formatter: InterpolationFormatter): void
 		deleteFormatter(name: string): void
